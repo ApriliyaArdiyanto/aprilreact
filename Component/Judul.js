@@ -4,14 +4,14 @@ import {Text} from 'react-native';
 export default class Judul extends React.Component{
     render(){
         return (
-            <Text style={salon.judul}>Biodata</Text>
+            <Text style={salon.judul}>{this.props.title}</Text>
         )
     }
 }
 
 const salon = {
     judul:{
-        color:'#ff7373',
+        color:'pink',
         fontSize: 75,
         fontWeight: 'bold',
     }

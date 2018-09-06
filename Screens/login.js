@@ -19,13 +19,14 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-export default class App extends Component<Props> {
+export default class Login extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
         <Judul title="BIODATA"/>
         <Judul title="LOGIN"/>
-        <Text>Welcome to React Native!</Text>
+        <Lucu/>
+        <Text>Welcome to React Native!!!!!!!!!!!</Text>
         <Text>Nama : Apriliya Ardiyanto</Text>
         <Text>Kelas : XI RPL 3</Text>
         <Text>No Absen : 07</Text>
