@@ -7,29 +7,19 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Image} from 'react-native';
-import Judul from './Component/Judul';
-import Lucu from './april/lucu';   
+import {StyleSheet, Text, View, StatusBar} from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import Login from './Pages/Login';
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Judul title="BIODATA"/>
-        <Judul title="LOGIN"/>
-        <Text>Welcome to React Native!</Text>
-        <Text>Nama : Apriliya Ardiyanto</Text>
-        <Text>Kelas : XI RPL 3</Text>
-        <Text>No Absen : 07</Text>
-        <Image style={styles.Image} source={require('./img/april.jpg')} />
+        <StatusBar
+              backgroundColor="#2B4D91"
+              barStyle="light-content"
+            />
+          <Login/>
       </View>
     );
   }
@@ -38,22 +28,5 @@ export default class App extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  Image: {
-    width : 250,
-    height : 250,
-  },
-});
+  });
